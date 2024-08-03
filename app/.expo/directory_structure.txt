@@ -1,0 +1,6 @@
+web 
+devices.json 
+directory_structure.txt 
+packager-info.json 
+README.md 
+settings.json 
