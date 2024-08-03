@@ -1,0 +1,2 @@
+# storeSpeedyDemo
+demo
