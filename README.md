@@ -6,7 +6,6 @@ Welcome to the Project Name! This repository is a complete demo of our applicati
 
 - [Overview](#overview)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Folder Structure](#folder-structure)
 - [Features](#features)
 - [Contributing](#contributing)
