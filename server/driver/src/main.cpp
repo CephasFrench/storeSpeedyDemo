@@ -19,7 +19,17 @@
 // Atomic boolean to keep track of the server running state
 std::atomic<bool> server_running{true};
 
+// Signal handler to handle termination signals
+void signalHandler(int signal) {
+    logMessage("Termination signal received. Shutting down...");
+    server_running = false;
+}
+
 int main() {
+    // Register signal handler
+    std::signal(SIGINT, signalHandler);
+    std::signal(SIGTERM, signalHandler);
+
     crow::SimpleApp app;  // Create a Crow application
     defineRoutes(app);    // Define application routes
 
@@ -60,10 +70,12 @@ int main() {
             // Periodic log statement
             logMessage("Server is running...");
         }
+        logMessage("Server logic thread exiting...");
     });
 
     // Wait for the server logic thread to finish before exiting
     server_logic_thread.join();
 
+    logMessage("Server has been stopped.");
     return 0;
 }
