@@ -20,7 +20,7 @@ void defineUpdateGroceryListEndpoint(crow::SimpleApp& app) {
                 if (!Json::parseFromStream(rbuilder, iss, &jsonData, &errs)) {
                     return crow::response(400, "Invalid JSON");
                 }
-                validateGroceryListJson(jsonData);
+                StoreSpeedyJsonHandler::validateGroceryListJson(jsonData);
                 StoreSpeedyJsonHandler::writeJsonFile(filePath, jsonData);
                 std::cout << "Grocery list updated successfully." << std::endl;
                 return crow::response(200);
