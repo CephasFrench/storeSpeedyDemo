@@ -1,14 +1,8 @@
 #include "crow/crow_all.h"
 #include "StoreSpeedyJsonHandler.h"
 #include "api/api_util.h"
-#include "compute_path.h"
-#include "update_aisle_data.h"
-#include "ping.h"
-#include "update_location.h"
-#include "grocery_list.h"
-#include "update_grocery_list.h"
-#include "check_item.h"
 #include "constants.h"
+#include "api/endpoints/endpoints.h"
 
 #include "config.h"
 #include <fstream>
@@ -19,83 +13,11 @@
 #include <thread>
 #include <chrono>
 
-void ensureDirectoryExists(const std::string& dir) {
-    if(LOG_FUNC_CALLS) {
-        std::cout << "ensureDirectoryExists() called" << std:: endl;
-    }
-    std::ifstream file(dir.c_str());
-    if (!file) {
-        std::system(("mkdir -p " + dir).c_str()); // Make a directory if it doesn't already exist
-    }
-}
-
-void ensureFileExists(const std::string& filePath, const Json::Value& defaultValue) {
-    if(LOG_FUNC_CALLS) {
-        std::cout << "ensureFileExists() called" << std:: endl;
-    }
-    std::ifstream file(filePath);
-    if (!file.good()) {
-        std::ofstream outFile(filePath);
-        outFile << defaultValue.toStyledString();
-        outFile.close();
-    }
-}
-
-crow::response handleError(const std::exception& e) {
-    return crow::response(500, e.what());
-}
-
-Json::Value readJsonData(const std::string& filePath, const Json::Value& defaultValue) {
-    if(LOG_FUNC_CALLS) {
-        std::cout << "readJsonData() (in main.cpp) called" << std:: endl;
-    }
-    ensureFileExists(filePath, defaultValue);
-    return StoreSpeedyJsonHandler::readJsonFile(filePath);
-}
 
 void validateGroceryListJson(const Json::Value& jsonData) {
     if (!jsonData.isMember("items") || !jsonData["items"].isArray()) {
         throw std::runtime_error("Invalid JSON structure: 'items' key missing or not an array.");
     }
-}
-
-void addItemToGroceryList(const std::string& userId, const std::string& location, const std::string& item) {
-    if(LOG_FUNC_CALLS) {
-        std::cout << "addItemToGroceryList() called" << std:: endl;
-    }
-    std::string filePath = storagePath + "users/" + userId + "/" + location + "_grocery_list.json";
-    std::ifstream file(filePath, std::ifstream::binary);
-    Json::Value root;
-
-    if (file.is_open()) {
-        file >> root;
-        file.close();
-    } else {
-        root["items"] = Json::arrayValue;
-    }
-
-    // Check for duplicates
-    for (const auto& existingItem : root["items"]) {
-        if (existingItem.asString() == item) {
-            return; // Item already exists, do nothing
-        }
-    }
-
-    root["items"].append(item);
-
-    std::ofstream outFile(filePath, std::ofstream::binary);
-    outFile << root;
-    outFile.close();
-}
-
-void defineRoutes(crow::SimpleApp& app) {
-    defineComputePathEndpoint(app);
-    defineUpdateAisleDataEndpoint(app);
-    definePingEndpoint(app);
-    defineUpdateLocationEndpoint(app);
-    defineGroceryListEndpoint(app);
-    defineUpdateGroceryListEndpoint(app);
-    defineCheckItemEndpoint(app);
 }
 
 int main() {

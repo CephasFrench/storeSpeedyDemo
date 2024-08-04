@@ -13,7 +13,6 @@ set(SRC_DIR ${CMAKE_SOURCE_DIR}/driver/src)
 # Define the directories
 set(API_DIR ${SRC_DIR}/api)
 set(API_JSON_DIR ${API_DIR}/json)
-set(API_ENDPOINTS_DIR ${API_DIR}/endpoints)
 set(INCLUDES_DIR ${SRC_DIR}/incudes)
 set(CROW_DIR ${INCLUDES_DIR}/crow)
 set(OBJECTS_DIR ${SRC_DIR}/objects)
@@ -62,7 +61,6 @@ endif()
 include_directories(${SRC_DIR})
 include_directories(${API_DIR})
 include_directories(${API_JSON_DIR})
-include_directories(${API_ENDPOINTS_DIR})
 include_directories(${INCLUDES_DIR})  # This includes driver/src/incudes
 include_directories(${CROW_DIR})      # This includes driver/src/incudes/crow
 include_directories(${OBJECTS_DIR})
@@ -76,13 +74,6 @@ set(SOURCE_FILES
     ${SRC_DIR}/main.cpp
     ${API_DIR}/api_util.cpp
     ${API_JSON_DIR}/StoreSpeedyJsonHandler.cpp
-    ${API_ENDPOINTS_DIR}/compute_path.cpp
-    ${API_ENDPOINTS_DIR}/update_aisle_data.cpp
-    ${API_ENDPOINTS_DIR}/ping.cpp
-    ${API_ENDPOINTS_DIR}/update_location.cpp
-    ${API_ENDPOINTS_DIR}/grocery_list.cpp
-    ${API_ENDPOINTS_DIR}/update_grocery_list.cpp
-    ${API_ENDPOINTS_DIR}/check_item.cpp
     ${OBJECTS_DIR}/aisle.cpp
     ${OBJECTS_DIR}/cart.cpp
     ${OBJECTS_DIR}/item.cpp

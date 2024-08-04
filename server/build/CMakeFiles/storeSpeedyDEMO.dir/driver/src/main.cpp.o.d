@@ -2162,12 +2162,6 @@ CMakeFiles/storeSpeedyDEMO.dir/driver/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/curl/header.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/curl/websockets.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/curl/mprintf.h \
-  /Users/cameronhardin/Desktop/storeSpeedyDemo/server/driver/src/api/endpoints/compute_path.h \
-  /Users/cameronhardin/Desktop/storeSpeedyDemo/server/driver/src/api/endpoints/update_aisle_data.h \
-  /Users/cameronhardin/Desktop/storeSpeedyDemo/server/driver/src/api/endpoints/ping.h \
-  /Users/cameronhardin/Desktop/storeSpeedyDemo/server/driver/src/api/endpoints/update_location.h \
-  /Users/cameronhardin/Desktop/storeSpeedyDemo/server/driver/src/api/endpoints/grocery_list.h \
-  /Users/cameronhardin/Desktop/storeSpeedyDemo/server/driver/src/api/endpoints/update_grocery_list.h \
-  /Users/cameronhardin/Desktop/storeSpeedyDemo/server/driver/src/api/endpoints/check_item.h \
   /Users/cameronhardin/Desktop/storeSpeedyDemo/server/driver/src/incudes/constants.h \
+  /Users/cameronhardin/Desktop/storeSpeedyDemo/server/driver/src/api/endpoints/endpoints.h \
   /Users/cameronhardin/Desktop/storeSpeedyDemo/server/driver/src/incudes/config.h
