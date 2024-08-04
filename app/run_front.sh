@@ -25,7 +25,7 @@ start_frontend() {
 
     # Start the frontend server in the same terminal
     echo "Starting the frontend server..."
-    npx expo start --port 8082
+    EXPO_DEBUG=true npx expo start --port 8082
 }
 
 # Ensure the script runs in an interactive terminal
