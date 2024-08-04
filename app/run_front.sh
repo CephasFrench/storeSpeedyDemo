@@ -6,11 +6,11 @@ start_frontend() {
 
     # Determine the frontend directory relative to the script location
     SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-    FRONTEND_DIR="/mnt/c/modules/GitHub/storeSpeedyDemo/app"  # Corrected path
+    FRONTEND_DIR="$SCRIPT_DIR"  # Since the script is inside "app" directory
 
     # Debug prints
     echo "Current script directory: $SCRIPT_DIR"
-    echo "Expected frontend directory: $FRONTEND_DIR"
+    echo "Frontend directory: $FRONTEND_DIR"
 
     # Navigate to the frontend directory
     if [ ! -d "$FRONTEND_DIR" ]; then
