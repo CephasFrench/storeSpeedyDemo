@@ -52,11 +52,8 @@ start_backend() {
         exit 1
     fi
 
-    # Run the backend server
-    if ! ./build/storeSpeedyPOC & then
-        echo "Failed to start backend server"
-        exit 1
-    fi
+    # Run the backend server in the background
+    ./build/storeSpeedyPOC &
     BACKEND_PID=$!
 }
 
@@ -109,8 +106,10 @@ check_for_updates
 # Trap to kill background processes on script exit
 trap "if [ ! -z $BACKEND_PID ]; then kill $BACKEND_PID; fi" EXIT
 
-# Start the backend and frontend
-start_backend
-start_frontend
+# Start the backend and frontend concurrently
+start_backend &
+start_frontend &
+
+wait # Wait for all background processes to complete
 
 echo "App is running. Backend has been started. Frontend is starting in a new terminal window."
