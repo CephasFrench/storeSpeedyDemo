@@ -81,6 +81,11 @@ inline void addItemToGroceryList(const std::string& userId, const std::string& l
     outFile.close();
 }
 
+void validateGroceryListJson(const Json::Value& jsonData) {
+    if (!jsonData.isMember("items") || !jsonData["items"].isArray()) {
+        throw std::runtime_error("Invalid JSON structure: 'items' key missing or not an array.");
+    }
+}
 
 inline void defineRoutes(crow::SimpleApp& app) {
     // Compute path endpoint

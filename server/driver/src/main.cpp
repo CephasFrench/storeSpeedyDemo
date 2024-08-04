@@ -13,13 +13,6 @@
 #include <thread>
 #include <chrono>
 
-
-void validateGroceryListJson(const Json::Value& jsonData) {
-    if (!jsonData.isMember("items") || !jsonData["items"].isArray()) {
-        throw std::runtime_error("Invalid JSON structure: 'items' key missing or not an array.");
-    }
-}
-
 int main() {
     crow::SimpleApp app;  // Create a Crow application
     defineRoutes(app);
@@ -51,6 +44,8 @@ int main() {
         std::cerr << "No available ports found in the range 8080-8100." << std::endl;
         return 1;
     }
+
+    //== Add program functionality here ==//
 
     return 0;
 }
