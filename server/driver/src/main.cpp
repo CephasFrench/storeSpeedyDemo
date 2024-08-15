@@ -12,45 +12,70 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
+#include <future>
+#include <atomic>
+#include <sstream>
 
+// Atomic boolean to keep track of the server running state
+std::atomic<bool> server_running{true};
 
-void validateGroceryListJson(const Json::Value& jsonData) {
-    if (!jsonData.isMember("items") || !jsonData["items"].isArray()) {
-        throw std::runtime_error("Invalid JSON structure: 'items' key missing or not an array.");
-    }
+// Signal handler to handle termination signals
+void signalHandler(int signal) {
+    logMessage("Termination signal received. Shutting down...");
+    server_running = false;
 }
 
 int main() {
+    // Register signal handler
+    std::signal(SIGINT, signalHandler);
+    std::signal(SIGTERM, signalHandler);
+
     crow::SimpleApp app;  // Create a Crow application
-    defineRoutes(app);
+    defineRoutes(app);    // Define application routes
 
     int port = 8080;
     int max_port = 8100;  // Define the maximum port to try
     bool server_started = false;
 
+    // Attempt to start the server on a port within the range
     while (!server_started && port <= max_port) {
         try {
-            app.port(port).multithreaded().run();  // Try to run the Crow application on the specified port with multithreading enabled
-            server_started = true;  // If successful, break out of the loop
+            app.port(port).multithreaded().run();
+            server_started = true;
+            logMessage("Server started on port " + std::to_string(port));
         } catch (const boost::system::system_error& e) {
             if (e.code() == boost::system::errc::address_in_use) {
-                // Suppress the specific exception message
-                std::cerr << "Port " << port << " in use. Trying next port..." << std::endl;
+                logMessage("Port " + std::to_string(port) + " in use. Trying next port...");
             } else {
-                // Print other exceptions
-                std::cerr << "Exception: " << e.what() << std::endl;
+                logMessage("Exception: " + std::string(e.what()));
             }
-            port++;  // Try the next port
+            port++;
         } catch (const std::exception& e) {
-            std::cerr << "Exception: " << e.what() << std::endl;
+            logMessage("Exception: " + std::string(e.what()));
             return 1;
         }
     }
 
     if (!server_started) {
-        std::cerr << "No available ports found in the range 8080-8100." << std::endl;
+        logMessage("No available ports found in the range 8080-8100.");
         return 1;
     }
 
+    // Start a separate thread for the main server logic loop
+    std::thread server_logic_thread([]() {
+        while (server_running) {
+            // Server logic: Add your server-side tasks here
+            std::this_thread::sleep_for(std::chrono::seconds(10)); // Placeholder for periodic task
+
+            // Periodic log statement
+            logMessage("Server is running...");
+        }
+        logMessage("Server logic thread exiting...");
+    });
+
+    // Wait for the server logic thread to finish before exiting
+    server_logic_thread.join();
+
+    logMessage("Server has been stopped.");
     return 0;
 }
