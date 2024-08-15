@@ -1,0 +1,17 @@
+# ninja log v6
+4	443	7446800641719866	CMakeFiles/StoreSolver.dir/main.cpp.obj	19991e0933c8b53e
+1184	1492	7446831697479073	StoreSolver.exe	ba7312f53395235
+5	431	7446811405964618	CMakeFiles/StoreSolver.dir/test.cpp.obj	1e4fae95e6c5d19a
+23	1000	7446830784082095	CMakeFiles/StoreSolver.dir/Node.cpp.obj	99ad9f0208a814ec
+19	903	7446830784037465	CMakeFiles/StoreSolver.dir/Edge.cpp.obj	4984463dc6edad54
+31	1114	7446830784154442	CMakeFiles/StoreSolver.dir/Path.cpp.obj	d128f021ec090a6d
+27	1183	7446830784113171	CMakeFiles/StoreSolver.dir/NodeFactory.cpp.obj	446f7f09259cda5c
+5	1049	7446831685685401	CMakeFiles/StoreSolver.dir/StoreGraph.cpp.obj	f889813d7299d1c4
+8	1184	7446831685726189	CMakeFiles/StoreSolver.dir/StoreGraphFactory.cpp.obj	42f116a137947cb2
+19	895	7446843434447904	CMakeFiles/StoreSolver.dir/main.cpp.obj	19991e0933c8b53e
+16	1088	7446843434414827	CMakeFiles/StoreSolver.dir/StoreGraph.cpp.obj	f889813d7299d1c4
+12	1655	7446843434379651	CMakeFiles/StoreSolver.dir/Maze.cpp.obj	df6ad11d57fa0e66
+1655	2137	7446843450815035	StoreSolver.exe	2b9c31ee64e23207
+10	892	7446846513094951	CMakeFiles/StoreSolver.dir/main.cpp.obj	19991e0933c8b53e
+7	1613	7446846513059761	CMakeFiles/StoreSolver.dir/Maze.cpp.obj	df6ad11d57fa0e66
+1613	2096	7446846529115620	StoreSolver.exe	2b9c31ee64e23207

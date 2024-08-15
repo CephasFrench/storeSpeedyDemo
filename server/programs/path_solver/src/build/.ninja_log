@@ -1,0 +1,10 @@
+# ninja log v6
+14	814	7448596985699514	CMakeFiles/StoreSolver.dir/main.cpp.obj	1a913eca7019ab42
+1237	1816	7454531310068943	StoreSolver.exe	1a2f0421f7ddfb7d
+42	566	7446838708782396	CMakeFiles/StoreSolver.dir/test.cpp.obj	3e8499a58c837ee3
+23	931	7446838708587957	CMakeFiles/StoreSolver.dir/Node.cpp.obj	bc5d7d7aabe4037a
+20	797	7446838708560077	CMakeFiles/StoreSolver.dir/Edge.cpp.obj	834512d546d5bbda
+29	1051	7446838708652038	CMakeFiles/StoreSolver.dir/Path.cpp.obj	be391abbf1de22b9
+26	1105	7446838708622037	CMakeFiles/StoreSolver.dir/NodeFactory.cpp.obj	464fc8e0ee305f31
+16	1236	7454531297857983	CMakeFiles/StoreSolver.dir/StoreGraph.cpp.obj	1ae4ac030379b3c1
+6	1165	7448575928694448	CMakeFiles/StoreSolver.dir/StoreGraphFactory.cpp.obj	d1c68c790f8460cb

@@ -1,0 +1,44 @@
+[
+{
+  "directory": "C:/modules/GitHub/storeSpeedyDemo/server/programs/path_solver/src/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++20 -o CMakeFiles\\StoreSolver.dir\\Edge.cpp.obj -c C:\\modules\\GitHub\\storeSpeedyDemo\\server\\programs\\path_solver\\src\\Edge.cpp",
+  "file": "C:\\modules\\GitHub\\storeSpeedyDemo\\server\\programs\\path_solver\\src\\Edge.cpp",
+  "output": "CMakeFiles\\StoreSolver.dir\\Edge.cpp.obj"
+},
+{
+  "directory": "C:/modules/GitHub/storeSpeedyDemo/server/programs/path_solver/src/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++20 -o CMakeFiles\\StoreSolver.dir\\Node.cpp.obj -c C:\\modules\\GitHub\\storeSpeedyDemo\\server\\programs\\path_solver\\src\\Node.cpp",
+  "file": "C:\\modules\\GitHub\\storeSpeedyDemo\\server\\programs\\path_solver\\src\\Node.cpp",
+  "output": "CMakeFiles\\StoreSolver.dir\\Node.cpp.obj"
+},
+{
+  "directory": "C:/modules/GitHub/storeSpeedyDemo/server/programs/path_solver/src/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++20 -o CMakeFiles\\StoreSolver.dir\\NodeFactory.cpp.obj -c C:\\modules\\GitHub\\storeSpeedyDemo\\server\\programs\\path_solver\\src\\NodeFactory.cpp",
+  "file": "C:\\modules\\GitHub\\storeSpeedyDemo\\server\\programs\\path_solver\\src\\NodeFactory.cpp",
+  "output": "CMakeFiles\\StoreSolver.dir\\NodeFactory.cpp.obj"
+},
+{
+  "directory": "C:/modules/GitHub/storeSpeedyDemo/server/programs/path_solver/src/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++20 -o CMakeFiles\\StoreSolver.dir\\Path.cpp.obj -c C:\\modules\\GitHub\\storeSpeedyDemo\\server\\programs\\path_solver\\src\\Path.cpp",
+  "file": "C:\\modules\\GitHub\\storeSpeedyDemo\\server\\programs\\path_solver\\src\\Path.cpp",
+  "output": "CMakeFiles\\StoreSolver.dir\\Path.cpp.obj"
+},
+{
+  "directory": "C:/modules/GitHub/storeSpeedyDemo/server/programs/path_solver/src/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++20 -o CMakeFiles\\StoreSolver.dir\\StoreGraph.cpp.obj -c C:\\modules\\GitHub\\storeSpeedyDemo\\server\\programs\\path_solver\\src\\StoreGraph.cpp",
+  "file": "C:\\modules\\GitHub\\storeSpeedyDemo\\server\\programs\\path_solver\\src\\StoreGraph.cpp",
+  "output": "CMakeFiles\\StoreSolver.dir\\StoreGraph.cpp.obj"
+},
+{
+  "directory": "C:/modules/GitHub/storeSpeedyDemo/server/programs/path_solver/src/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++20 -o CMakeFiles\\StoreSolver.dir\\StoreGraphFactory.cpp.obj -c C:\\modules\\GitHub\\storeSpeedyDemo\\server\\programs\\path_solver\\src\\StoreGraphFactory.cpp",
+  "file": "C:\\modules\\GitHub\\storeSpeedyDemo\\server\\programs\\path_solver\\src\\StoreGraphFactory.cpp",
+  "output": "CMakeFiles\\StoreSolver.dir\\StoreGraphFactory.cpp.obj"
+},
+{
+  "directory": "C:/modules/GitHub/storeSpeedyDemo/server/programs/path_solver/src/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++20 -o CMakeFiles\\StoreSolver.dir\\main.cpp.obj -c C:\\modules\\GitHub\\storeSpeedyDemo\\server\\programs\\path_solver\\src\\main.cpp",
+  "file": "C:\\modules\\GitHub\\storeSpeedyDemo\\server\\programs\\path_solver\\src\\main.cpp",
+  "output": "CMakeFiles\\StoreSolver.dir\\main.cpp.obj"
+}
+]

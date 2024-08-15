@@ -1,0 +1,48 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe build all files",
+            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${workspaceFolder}\\*.cpp",   // Compile all .cpp files in the workspace folder
+                "-o",
+                "${workspaceFolder}\\output.exe"  // Output executable in the workspace folder
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"  // Set the current working directory to the workspace folder
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "Task to compile all .cpp files in the workspace."
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: cl.exe build all files",
+            "command": "cl.exe",
+            "args": [
+                "/Zi",
+                "/EHsc",
+                "/nologo",
+                "${workspaceFolder}\\*.cpp",  // Compile all .cpp files in the workspace folder
+                "/Fe${workspaceFolder}\\output.exe"  // Output executable in the workspace folder
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"  // Set the current working directory to the workspace folder
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Task to compile all .cpp files in the workspace."
+        }
+    ],
+    "version": "2.0.0"
+}
