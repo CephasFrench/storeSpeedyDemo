@@ -1,2 +1,0 @@
-images 
-directory_structure.txt 

@@ -26,6 +26,7 @@ start_frontend() {
     # Start the frontend server in the same terminal
     echo "Starting the frontend server..."
     EXPO_DEBUG=true npx expo start --port 8082
+    #-c clears cache (not clearing has caused errors before)
 }
 
 # Ensure the script runs in an interactive terminal

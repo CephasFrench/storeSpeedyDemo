@@ -253,7 +253,7 @@ boost_headers_DIR:PATH=/opt/homebrew/lib/cmake/boost_headers-1.85.0
 pkgcfg_lib_PC_CURL_curl:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/lib/libcurl.tbd
 
 //Path to a library.
-pkgcfg_lib_POPPLER_poppler-cpp:FILEPATH=/opt/homebrew/Cellar/poppler/24.04.0/lib/libpoppler-cpp.dylib
+pkgcfg_lib_POPPLER_poppler-cpp:FILEPATH=/opt/homebrew/Cellar/poppler/24.04.0_1/lib/libpoppler-cpp.dylib
 
 //Value Computed by CMake
 storeSpeedyDEMO_BINARY_DIR:STATIC=/Users/cameronhardin/Desktop/storeSpeedyDemo/server/build
@@ -423,7 +423,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/opt/homebrew/lib/cmake/Boost-1.85.
 //Details about finding CURL
 FIND_PACKAGE_MESSAGE_DETAILS_CURL:INTERNAL=[/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/lib/libcurl.tbd][/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include][c ][v8.6.0()]
 //Details about finding OpenCV
-FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/opt/homebrew/Cellar/opencv/4.10.0_1][v4.10.0()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/opt/homebrew/Cellar/opencv/4.10.0_2][v4.10.0()]
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/opt/homebrew/bin/pkg-config][v0.29.2()]
 PC_CURL_CFLAGS:INTERNAL=
@@ -465,32 +465,32 @@ PC_CURL_libcurl_VERSION:INTERNAL=
 PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
-POPPLER_CFLAGS:INTERNAL=-I/opt/homebrew/Cellar/poppler/24.04.0/include/poppler/cpp;-I/opt/homebrew/Cellar/poppler/24.04.0/include/poppler
+POPPLER_CFLAGS:INTERNAL=-I/opt/homebrew/Cellar/poppler/24.04.0_1/include/poppler/cpp;-I/opt/homebrew/Cellar/poppler/24.04.0_1/include/poppler
 POPPLER_CFLAGS_I:INTERNAL=
 POPPLER_CFLAGS_OTHER:INTERNAL=
 POPPLER_FOUND:INTERNAL=1
-POPPLER_INCLUDEDIR:INTERNAL=/opt/homebrew/Cellar/poppler/24.04.0/include
-POPPLER_INCLUDE_DIRS:INTERNAL=/opt/homebrew/Cellar/poppler/24.04.0/include/poppler/cpp;/opt/homebrew/Cellar/poppler/24.04.0/include/poppler
-POPPLER_LDFLAGS:INTERNAL=-L/opt/homebrew/Cellar/poppler/24.04.0/lib;-lpoppler-cpp
+POPPLER_INCLUDEDIR:INTERNAL=/opt/homebrew/Cellar/poppler/24.04.0_1/include
+POPPLER_INCLUDE_DIRS:INTERNAL=/opt/homebrew/Cellar/poppler/24.04.0_1/include/poppler/cpp;/opt/homebrew/Cellar/poppler/24.04.0_1/include/poppler
+POPPLER_LDFLAGS:INTERNAL=-L/opt/homebrew/Cellar/poppler/24.04.0_1/lib;-lpoppler-cpp
 POPPLER_LDFLAGS_OTHER:INTERNAL=
-POPPLER_LIBDIR:INTERNAL=/opt/homebrew/Cellar/poppler/24.04.0/lib
+POPPLER_LIBDIR:INTERNAL=/opt/homebrew/Cellar/poppler/24.04.0_1/lib
 POPPLER_LIBRARIES:INTERNAL=poppler-cpp
-POPPLER_LIBRARY_DIRS:INTERNAL=/opt/homebrew/Cellar/poppler/24.04.0/lib
+POPPLER_LIBRARY_DIRS:INTERNAL=/opt/homebrew/Cellar/poppler/24.04.0_1/lib
 POPPLER_LIBS:INTERNAL=
 POPPLER_LIBS_L:INTERNAL=
 POPPLER_LIBS_OTHER:INTERNAL=
 POPPLER_LIBS_PATHS:INTERNAL=
 POPPLER_MODULE_NAME:INTERNAL=poppler-cpp
-POPPLER_PREFIX:INTERNAL=/opt/homebrew/Cellar/poppler/24.04.0
-POPPLER_STATIC_CFLAGS:INTERNAL=-I/opt/homebrew/Cellar/poppler/24.04.0/include/poppler/cpp;-I/opt/homebrew/Cellar/poppler/24.04.0/include/poppler
+POPPLER_PREFIX:INTERNAL=/opt/homebrew/Cellar/poppler/24.04.0_1
+POPPLER_STATIC_CFLAGS:INTERNAL=-I/opt/homebrew/Cellar/poppler/24.04.0_1/include/poppler/cpp;-I/opt/homebrew/Cellar/poppler/24.04.0_1/include/poppler
 POPPLER_STATIC_CFLAGS_I:INTERNAL=
 POPPLER_STATIC_CFLAGS_OTHER:INTERNAL=
-POPPLER_STATIC_INCLUDE_DIRS:INTERNAL=/opt/homebrew/Cellar/poppler/24.04.0/include/poppler/cpp;/opt/homebrew/Cellar/poppler/24.04.0/include/poppler
-POPPLER_STATIC_LDFLAGS:INTERNAL=-L/opt/homebrew/Cellar/poppler/24.04.0/lib;-lpoppler-cpp;-lpoppler
+POPPLER_STATIC_INCLUDE_DIRS:INTERNAL=/opt/homebrew/Cellar/poppler/24.04.0_1/include/poppler/cpp;/opt/homebrew/Cellar/poppler/24.04.0_1/include/poppler
+POPPLER_STATIC_LDFLAGS:INTERNAL=-L/opt/homebrew/Cellar/poppler/24.04.0_1/lib;-lpoppler-cpp;-lpoppler
 POPPLER_STATIC_LDFLAGS_OTHER:INTERNAL=
 POPPLER_STATIC_LIBDIR:INTERNAL=
 POPPLER_STATIC_LIBRARIES:INTERNAL=poppler-cpp;poppler
-POPPLER_STATIC_LIBRARY_DIRS:INTERNAL=/opt/homebrew/Cellar/poppler/24.04.0/lib
+POPPLER_STATIC_LIBRARY_DIRS:INTERNAL=/opt/homebrew/Cellar/poppler/24.04.0_1/lib
 POPPLER_STATIC_LIBS:INTERNAL=
 POPPLER_STATIC_LIBS_L:INTERNAL=
 POPPLER_STATIC_LIBS_OTHER:INTERNAL=
@@ -510,5 +510,5 @@ boost_headers_DIR-ADVANCED:INTERNAL=1
 pkgcfg_lib_PC_CURL_curl-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_POPPLER_poppler-cpp
 pkgcfg_lib_POPPLER_poppler-cpp-ADVANCED:INTERNAL=1
-prefix_result:INTERNAL=/opt/homebrew/Cellar/poppler/24.04.0/lib
+prefix_result:INTERNAL=/opt/homebrew/Cellar/poppler/24.04.0_1/lib
 
