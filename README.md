@@ -1,3 +1,12 @@
+# Shortest Path Image
+
+#### Generated from running the shortest path algorithm on the locations specified in the store blueprint
+
+![Store Path](StorePath.png)
+
+
+
+---
 # storeSpeedyPOC SPRINT Plan
 
 json:
